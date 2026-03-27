@@ -1,14 +1,22 @@
 # Workshop: Gradient Descent in Single- and Multi-Layer Neural Networks
 
+## Workshop Description
+This repository serves as a profound technical exploration into the mechanics of **Gradient Descent** across modern machine learning frameworks. The primary objective of this workshop is to demystify how neural networks optimize their weights recursively by descending across a loss landscape. 
+
+By taking a comparative approach, this workshop explores standard dataset optimization utilizing isolated math equations, and implements these structures natively across three distinct levels of API abstraction:
+1. **Low-Level Native Gradients (PyTorch):** Tracking gradients with direct variable autograd tracking.
+2. **Intermediate Tape Execution (TensorFlow):** Managing manual computation graphs via `tf.GradientTape`.
+3. **High-Level Abstraction (Keras):** Packaging pipelines within standard API configurations (`model.fit`) alongside customized training overrides.
+
 ## Team Information
 **Group 2**
-- Ali Cihan Ozdemir (ID: 9091405)
-- Lohith Reddy Danda (ID: 9054470)
-*(Note: Rosetta/Roshan did not attend class and made no contributions to the project)*
+- **Ali Cihan Ozdemir** (Student ID: 9091405)
+- **Lohith Reddy Danda** (Student ID: 9054470)
+*(Note: Roshan did not attend class and made no contributions to the project and is excluded from this document and the final submission.)*
 
 ## Summary of Completed Work
-This repository contains the completed Jupyter Notebook for the Gradient Descent workshop. In this assignment, we:
-1. **PyTorch Implementation:** Successfully implemented a manual gradient descent training loop in PyTorch, utilizing `autograd` and updating parameters properly using `torch.no_grad()`.
-2. **TensorFlow Implementation:** Wrote a customized `tf.GradientTape` training loop from scratch, computing and applying gradients manually. Furthermore, we extended the baseline code to utilize mini-batch training using `tf.data.Dataset` and introduced noise to the dataset. We then plotted the loss curve over epochs to analyze optimization trajectories under stochasticity.
-3. **Keras Implementations:** Trained a Sequential neural network by both compiling/fitting the model using Keras' high-level API and by defining a custom training step iteratively mapping `tape.gradient()`.
-4. **Reflection Answers:** Addressed 15 conceptual and practical questions exploring learning rate characteristics, backpropagation mechanics, optimizer comparisons (SGD), and differences across three major AI frameworks: PyTorch, TensorFlow, and Keras.
+This repository contains the completed code challenges evaluating gradient workflows. Throughout this assignment, we:
+1. **PyTorch Validation:** Implemented a robust computational loop utilizing autograd, successfully running isolated parameter updates directly within a `torch.no_grad()` matrix boundary.
+2. **TensorFlow & Extensibility:** Computed analytical gradients recursively via `tf.GradientTape()` while extending the core logic to accommodate raw noise variations and isolated mini-batching using standard `tf.data.Dataset` pipelines. We successfully output the dynamically plotted loss curve across localized epochs.
+3. **Keras Compilation:** Orchestrated predictive behavior efficiently via `keras.Sequential()` high-level compilations natively alongside building an iterative manual equivalent mapping `tape.gradient()`.
+4. **Comprehensive Reflections:** Thoroughly assessed and addressed 15 distinct critical questions comparing framework tradeoffs, mathematical behavior for local linear approximations, and the tangible differences bridging single node SGD iterations.
